@@ -4,8 +4,8 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
-spec:
-  replicas: 3
+spec: # Deploymentの望ましい状態を定義
+  replicas: 3 # 3つのレプリカPodを作成
   selector:
     matchLabels:
       app: nginx
