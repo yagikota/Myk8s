@@ -1,11 +1,10 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx
-spec:
+apiVersion: v1 # どのバージョンのKubernetesAPIを利用してリソースを作成するか
+kind: Pod # リソースの種類
+metadata: # リソースを一意に特定するための情報
+  name: nginx # 文字列を指定
+spec: # リソースの望ましい状態（specの正確なフォーマットは、リソースごとに異なる。cf. 参考文献 マニュフェストファイルの説明）
   containers:
   - name: nginx
     image: nginx:1.14.2
     ports:
     - containerPort: 80
-
