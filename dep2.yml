@@ -30,4 +30,4 @@ spec:
         ports:
         - containerPort: 8080
         
-        
+# 引用: https://github.com/CyberAgentHack/one-day-youth-bootcamp-ciu/blob/main/examples/deployment.yaml        
