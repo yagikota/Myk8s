@@ -1,24 +1,23 @@
 apiVersion: apps/v1
 kind: ReplicaSet
-metadata:
+metadata: # リソースを一意に特定するための情報
   name: frontend
   labels:
     app: guestbook
     tier: frontend
-spec:
-  # modify replicas according to your case
-  replicas: 3
-  selector:
+spec: # ReplicaSetの望ましい状態を定義
+  replicas: 3 # Podの数
+  selector: # .spec.template.metadata.labelsと一致させる。ReplicaSetが所有するPodを指定するため。（今回の場合、tier: frontendが一致している）
     matchLabels:
       tier: frontend
     matchExpressions:
       - {key: tier, operator: In, values: [frontend]}
-  template:
+  template: # template以下はPodの定義と同様に書く。templateの定義を持つPodの複製を行う。
     metadata:
-      labels:
+      labels: # spec.selectorと一致させる（2つのラベルのうちtier: frontendが一致している）
         app: guestbook
         tier: frontend
-    spec:
+    spec: # Podの望ましい状態を定義
       containers:
       - name: php-redis
         image: gcr.io/google_samples/gb-frontend:v3
@@ -36,4 +35,4 @@ spec:
           # value: env
         ports:
         - containerPort: 80
-
+        
