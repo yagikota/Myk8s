@@ -8,4 +8,3 @@ spec: # リソースの望ましい状態（specの正確なフォーマット�
     image: nginx:1.14.2
     ports:
     - containerPort: 80
-# cf. https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.22/#pod-v1-core
