@@ -1,6 +1,6 @@
 # Myk8s
 
-* k8s勉強のために使用したマニュフェストファイルです。
+* k8s勉強のために使用したマニュフェストファイルです。インターンで得られた知見などをまとめました。
 * 主に公式ドキュメントと[こちら](https://github.com/CyberAgentHack/one-day-youth-bootcamp-ciu/tree/main/examples)を参考にしています。
 
 ## 参考文献
